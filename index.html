@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Time</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300&family=Pacifico&display=swap"rel="stylesheet"/>
+    <style>
+
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Poppins";
+}
+img
+{
+    width: 100%;
+}
+body
+{
+    overflow-x: hidden;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 930px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1130px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1340px;
+  }
+}
+
+/* start header */
+header {
+  padding: 10px;
+  background-color: #f0f4ec;
+  
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .links {
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  display: none;
+  /* margin-top: -10px; */
+
+}
+
+
+header .container .links a {
+  text-decoration: none;
+  color: #3f3f3f;
+  padding-top: 20px;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  align-self:baseline;
+}
+
+header .toggle i {
+  font-size: 16px;
+  color: #3f3f3f;
+  cursor: pointer;
+}
+header .container .logo {
+  font-family: "Merienda";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28.3446px;
+  color: #396c03;
+  position: relative;
+}
+header .container .logo::after {
+  content: "";
+  position: absolute;
+  border: 4px solid #ff8b00;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  width: 10px;
+  height: 12px;
+  top: -10px;
+  right: -25px;
+  transform: rotate(-10deg);
+}
+.fa-caret-down ,.container .links button .fa-right-to-bracket
+{
+    display: inline;
+}
+
+.container .links .login {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  width: 120px;
+  background: rgb(57, 108, 3, 100%);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s linear;
+  border-bottom: 4px solid #3e4f24;
+}
+.container .links .login:hover , explore .container .discription button:hover
+{
+    background: #3e4f24;
+}
+@media (min-width: 992px) {
+  header .container .links a {
+    display: inline;
+    width: 10px;
+  }
+
+  header .logo {
+    align-items: center;
+  }
+
+  header .toggle {
+    display: none;
+  }
+
+  header .links {
+    display: flex !important;
+    flex-direction: row;
+    width: 40%;
+  }
+
+
+}
+@media(max-width : 992px)
+{
+    header .container .logo {
+  font-family: "Merienda";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28.3446px;
+  color: #396c03;
+  position: relative;
+}
+header .container .logo::after {
+  content: "";
+  position: absolute;
+  border: 4px solid #ff8b00;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  width: 10px;
+  height: 12px;
+  top: -10px;
+  right: -25px;
+  transform: rotate(-10deg);
+}
+.fa-caret-down ,.container .links button .fa-right-to-bracket
+{
+    display: inline;
+}
+
+.container .links .login {
+
+  font-size: 16px;
+  align-self: center;
+  margin-top: 15px;
+}
+header {
+  padding: 15px;
+  background-color: #f0f4ec;
+  
+}
+}
+
+/* start section 1 */
+order .container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+order .container .discription
+{
+    position: relative;
+    /* width: 60%; */
+}
+order .container .discription .png-container
+{
+    position: absolute;
+    top: -120px;
+    left: -70px;
+    width: 150px;
+    z-index: -1;
+}
+order .container .discription h1
+{
+    font-family: "Merienda";
+    font-weight: 600;
+  font-size: 60px;
+  line-height: 100px;
+  color: #396c03;
+}
+order .container .img-container .png2-container
+{
+    position: absolute;
+    right: -50px;
+    top: -30px;
+    width: 150px;
+    z-index: -1;
+}
+order .container .img-container
+{
+    position: relative;
+    width:38%;
+}
+@media (max-width : 992px) {
+
+    order .container
+{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 94vw;
+}
+order .container .discription
+{
+   width: 100%;
+   /* align-self: center; */
+   margin-bottom: 50px;
+   align-self: center;
+   display: flex;
+   justify-content: center;
+   margin-left: 20px;
+}
+order .container .discription h1
+{
+   font-size: 44px;
+   line-height: 60px;
+   position: relative;
+   /* text-align: center; */
+}
+order .container .img-container
+{
+    width: 85%;
+}
+order .container .img-container .png2-container
+{
+    display: none;
+}
+order .container .discription .png-container
+{
+    left: -10px;
+    top: -115px;
+    width: 120px;
+    z-index: -1;
+}
+}
+/* end section 1 */
+
+/* start section 2 */
+explore .container
+{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    justify-content: space-between ;
+}
+explore .container .discription
+{
+    width: 40%;
+}
+explore .container .img-container
+{
+    width: 50%;
+}
+explore .container .discription h2
+{   
+    font-family: "Merienda";
+    font-weight: 500;
+  font-size: 50px;
+  /* line-height: 0px; */
+  color: #396c03;
+}
+explore .container .discription p
+{
+    font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  margin-top: 30px;
+  color: #676767;
+  margin-bottom: 30px;
+}
+explore .container .discription button
+{
+    font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  width: 200px;
+  background: rgb(57, 108, 3, 100%);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s linear;
+  border-bottom: 4px solid #3e4f24;
+}
+@media(max-width : 992px)
+{
+    explore .container
+{
+    flex-direction: column;
+}
+explore .container .discription
+{
+    width: 100%;
+    text-align: center;
+}
+explore .container .img-container
+{
+    width: 100%;
+    margin-top: 70px;
+}
+}
+
+/* end section 2 */
+
+
+/* start section 3 */
+wide .container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+wide .container div
+{
+    padding: 50px;
+    border-radius: 20px;
+    transition: 0.5s linear;
+}
+wide .container div:hover
+{
+  background-color: #EEE;
+}
+wide .container div:hover img
+{
+  transform: scale(1.1);
+}
+wide .container div h3 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 140%;
+    color: #3f3f3f;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+wide .container div p
+{
+    color: #676767;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+  
+}
+wide .container div img
+{
+    width: 35%;
+    transition: 0.5s ease-in-out;
+}
+
+@media (max-width:992px) {
+    wide .container
+{
+    flex-direction: column;
+    text-align: center;
+}
+    
+}
+/* end section 3 */
+
+/* start image section */
+conimage .container  {
+  margin-top: 100px;
+  position: relative;
+  width: 70%;
+}
+conimage .container .discription  {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%,-50%);
+}
+conimage .container .discription h2 {
+    color: #fff;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 130%;
+    text-align: center;
+  }
+  conimage .container .discription p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    margin-top: 25px;
+    text-align: center;
+
+    color: #ededed;
+  }
+  conimage .container .discription button
+  {
+    background: #ff8b00;
+    border-radius: 224.4px;
+    width: 276px;
+    padding: 15px 60px;
+    color: #fff;
+    margin-top: 25px;
+    transition: 0.3s linear;
+    border: none;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer ;
+  }
+  conimage .container .discription button:hover
+  {
+    opacity: 0.8;
+    background-color: #ff8b00;
+  }
+  @media (max-width : 992px)
+  {
+    conimage .container   {
+      margin-left: 15px;
+      width: 95%;
+    }
+    conimage .container .discription h2  {
+      font-size: 20px;
+      width: 100%;
+    }
+    conimage .container .discription p  {
+      font-size: 12px;
+      margin-top: 15px;
+    }
+    conimage .container .discription button  {
+      font-size: 14px;
+      margin-top: 10px;
+      width: 150px;
+      padding-left: 0;
+      padding-right: 0;
+
+    }
+  }
+/* end image section */
+
+/* start section 4 */
+application .container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+application .container .discription h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  color: #396c03;
+}
+application .container .discription p {
+    color: #676767;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+buttons {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+buttons .apple {
+  margin-right: 20px;
+}
+.get-ios,
+.get-android {
+  font-size: 10px;
+}
+buttons button {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-evenly;
+  align-items: center;
+  background: #090909;
+    border-radius: 13.3014px;
+    width: 200px;
+    height: 88.12px;
+    color: #fff;
+    border: none;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+buttons button i {
+  font-size: 45px;
+  grid-row: span 2;
+}
+buttons button:hover {
+  opacity: 0.9;
+  transform: scale(1.1);
+  background-color: #fff;
+  color: #090909;
+}
+.fa-apple {
+  font-size: 60px;
+}
+@media(max-width : 992px)
+{
+    application .container
+{
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+.imggg
+{
+    margin-top: 100px;
+}
+}
+/* end section 4 */
+
+/* start footer */
+footer
+{
+    background-color: #396c03;
+}
+footer .container 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+footer .container .links div
+{
+    display: inline-block;
+}
+footer .container .links div:not(:last-child)
+{
+        margin-right: 75px;
+}
+footer .container .links div a
+{
+    display: block;
+    text-decoration: none;
+    color: #dedede;
+    margin-top: 25px;
+}
+footer .container .links div a:hover
+{
+text-decoration: underline;
+}
+footer .container .links div h2
+{
+    color: #FFF;
+}
+footer .container .logo {
+  font-family: "Merienda";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28.3446px;
+  color: #fff;
+  position: relative;
+}
+footer .container .logo::after {
+  content: "";
+  position: absolute;
+  border: 4px solid #ff8b00;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  width: 10px;
+  height: 12px;
+  top: -10px;
+  right: -25px;
+  transform: rotate(-10deg);
+}
+footer .container .discription p
+{
+    font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 200%;
+  color: #dedede;
+  opacity: 0.8;
+  margin-top: 30px;
+}
+@media(max-width:992px)
+{
+    footer .container
+    {
+        flex-direction: column;
+        text-align: center  ;
+    }
+    footer .container .discription
+    {
+        margin-bottom: 50px;
+    }
+    footer .container .links div:not(:last-child)
+{
+        margin-right: 35px;
+}
+}
+/* end footer */
+
+    </style>
+</head>
+
+  <body>
+    <!-- start section 1 -->
+    <header>
+      <nav class="container">
+        <div class="logo">
+          FoodTime
+        </div>
+        <div class="links">
+          <a href="#">Home</a>
+          <a href="#">Blog</a>
+          <a href="#">About</a>
+          <a href="#">EN&nbsp;<i class="fa-solid fa-caret-down"></i></a>
+          <a class="login" href="login.html" target="_blank"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Login</a>
+        </div>
+        <div class="toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- end section 1 -->
+
+
+
+    <!-- start section 2 -->
+    <order>
+        <div class="container">
+            <div class="discription">
+     
+            <h1>Order food online<br>from your favourite<br>local restaurants.
+            <div class="png-container">
+            <img src="—Pngtree—hand-painted noise green leaf element_4054582 1.png" alt="">
+            </div>
+            </h1>
+            </div>
+            <div class="img-container">
+            <div class="png2-container">
+            <img src="—Pngtree—hand-painted noise green leaf element_4054582 1.png" alt="">
+            </div>
+            <img src="image 1.png" alt="">
+            </div>
+        </div>
+    </order>
+
+    <explore>
+        <div class="container">
+            <div class="discription">
+                <h2>Explore your<br>favourite city’s food.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur. Ornare massa nunc nibh tristique. Non ligula tristique ut ut libero sit convallis maecenas. At egestas auctor porta mattis.</p>
+                <button> Explore &nbsp; <i class="fa-solid fa-arrow-right"></i> </button>
+            </div>
+            <div class="img-container">
+                <img src="Group 2.png" alt="">
+            </div>
+        </div>
+    </explore>
+    <!-- end section 2 -->
+
+    <!-- start section 3  -->
+    <wide>
+        <div class="container">
+        <div>
+          <img src="Frame.png" alt="">
+          <h3>Wide selection of<br />restaurants</h3>
+          <p>
+            Lorem ipsum dolor sit amet<br />consectetur. Ornare massa<br />nunc
+            nibh tristique.
+          </p>
+        </div>
+        <div>
+          <img  src="Frame 2.png" alt="">
+          <h3>Easy ordering<br />process</h3>
+          <p>
+            Lorem ipsum dolor sit amet<br />consectetur. Ornare massa<br />nunc
+            .
+          </p>
+        </div>
+        <div>
+          <img  src="Frame 3.png" alt="">
+          <h3>Fast delivery<br />within 20 min</h3>
+          <p>
+            Lorem ipsum dolor sit amet<br />consectetur. Ornare massa<br />nunc
+            nibh.
+          </p>
+        </div>
+        </div>
+      </wide>
+    <!-- end section 3 -->
+
+
+    <!-- start image section -->
+
+    <conimage>
+        <div class="container">
+        <img  src="image 3.png" alt="" />
+        <div class="discription">
+          <h2>Want to be a part of Foodtime?</h2>
+          <p>List your restaurant or shop on foodtime.</p>
+          <a style="text-decoration: none"  target="_blank"
+            ><button id="get">Get started &nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button
+          ></a>
+          <p id="par1" style='margin-left:-50px; display: none; '> lorem </p>
+        </div>
+        </div>
+      </conimage>
+    <!-- end image section -->
+
+    <!-- start section 4 -->
+    <application>
+        <div class="container">
+    <div class="discription">
+          <h2>Put us in your pocket</h2>
+          <p>
+            Download our app from google play or app<br />store and you don’t
+            have to be worry about<br />your food anymore.
+          </p>
+          <buttons>
+            <button class="apple">
+              <i class="fa-brands fa-apple"></i>
+              <span class="get-ios">Download on the</span>App Store
+            </button>
+            <button class="android">
+              <i class="fa-brands fa-google-play"></i>
+              <span class="get-android">GET IT ON</span>Google Play
+            </button>
+          </buttons>
+        </div>
+        <div class="imggg">
+          <img src="sushibar-mockup copy 1.png" alt="" />
+        </div>
+        </div>
+    </application>
+    <!-- end section 4  -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+        <div class="discription">
+          <div><span class="logo" >FoodTime</span></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Odio amet<br />natoque
+            tortor convallis. Bibendum sapien<br />suspendisse ipsum urna
+            malesuada elit. Bibendum<br />vitae nibh scelerisque sed aliquam
+            ullamcorper est.
+          </p>
+        </div>
+        <div class="links">
+        <div class="quick links">
+          <h2>Quick Links</h2>
+          <a href=""> Browse Foodtime </a>
+          <a href=""> Browse Food tim </a>
+          <a href=""> Registration </a>
+        </div>
+        <div class="about">
+          <h2>About</h2>
+          <a href=""> About Us' </a>
+          <a href=""> Minssion </a>
+          <a href=""> Contact </a>
+        </div>
+        <div class="social">
+          <h2>Social</h2>
+          <a href=""> Facebook </a>
+          <a href=""> Twitter </a>
+          <a href=""> Instagram </a>
+        </div>
+        </div>
+        </div>
+      </footer>
+    <!-- end footer -->
+
+    <script>
+      const toggle =  document.querySelector("header .toggle i");
+const links = document.querySelector("header .links");
+toggle.addEventListener("click", ()=> {
+  if(links.style.display != "flex") {
+    links.style.display = "flex";
+  } else {
+    links.style.display = "none";
+  }
+})
+    </script>
+  </body>
+
+</html>

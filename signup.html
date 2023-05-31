@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2B Sign Up</title>
+    <link rel="icon" type="image/x-icon" href="2b.ico" />
+    <link rel="stylesheet" href="all.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@300&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+      integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        perspective: 600px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: 0.5s;
+      }
+
+      form {
+        height: 80%;
+        margin: 20px;
+        padding-top: 10px;
+        z-index: 1;
+        text-align: center;
+        margin-left: 40px;
+      }
+      form label {
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        color: #3f3f3f;
+        font-size: 14px;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        width: 100%;
+        background-color: #f0f0f0;
+        padding: 16px 8px;
+        margin: 8px 0;
+        /* display: inline-block; */
+        /* border: 1px solid #ccc; */
+        /* box-sizing: border-box; */
+        /* border-radius: 10px; */
+        border: none;
+        /* font-size: 16px; */
+        /* border-radius: 50px; */
+        padding-left: 45px;
+        /* border-top: 2px solid #396C03;   */
+        position: relative;
+      }
+      button {
+        background-color: blueviolet;
+        color: white;
+        padding: 14px 0;
+        margin: 10px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 100px;
+        border-bottom: 3px solid darkmagenta;
+      }
+
+      button:hover {
+        opacity: 0.9;
+      }
+      .formcontainer {
+        text-align: left;
+        margin: 24px;
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+      input[type="text"]:focus,
+      input[type="password"]:focus,
+      input[type="email"]:focus {
+        outline: none;
+        border-bottom: 3px solid #396c03;
+      }
+      sign {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        color: #3f3f3f;
+        /* opacity: 0.75; */
+      }
+      sign a {
+        font-weight: 600;
+        opacity: 1;
+        transition: 0.2s;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      body {
+        background-image: -webkit-linear-gradient(
+          136deg,
+          rgb(0, 50, 0) 0%,
+          rgb(250, 250, 250) 120%
+        );
+      }
+
+      sign a:active {
+        color: #396c03;
+      }
+
+      contain {
+        height: 100vh;
+        /* overflow: hidden; */
+        /* margin:500px auto; */
+        display: grid;
+        grid-template-columns: 37% 50%;
+        grid-template-rows: 70%;
+        /* align-items: center; */
+        justify-content: center;
+        /* background-image: -webkit-linear-gradient(136deg, rgb(0, 80, 0) 0%, rgb(250, 208, 250) 100%); */
+      }
+
+      .image {
+        /* float: left; */
+        /* width: 40%; */
+        background-image: url(ft.jpg);
+        background-position: center;
+        background-size: cover;
+        filter: brightness(0.2);
+        margin-top: 22.3%;
+        height: 97.5%;
+        margin-left: -6%;
+      }
+
+      body {
+        max-height: 100vh;
+        max-width: 100vw;
+        overflow: hidden;
+      }
+
+      svg.bot {
+        position: absolute;
+        z-index: -1;
+        height: 30%;
+        bottom: -100px;
+        transform: scale(1.5);
+      }
+      svg.tp {
+        position: absolute;
+        z-index: -1;
+        height: 20%;
+        top: -50px;
+      }
+
+      logo {
+        margin-left: 100%;
+        font-family: "Merienda", cursive;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        color: #396c03;
+        line-height: 160%;
+        position: relative;
+      }
+      logo::after {
+        content: " ";
+        position: absolute;
+        border: 4px solid #ff8b00;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        width: 10px;
+        height: 12px;
+        top: -10px;
+        right: -25px;
+        transform: rotate(-10deg);
+      }
+      .form-container {
+        margin-top: 40px;
+      }
+      .formcontainer .container label {
+        font-size: 16px;
+      }
+      .fa {
+        position: fixed;
+        margin-top: 23px;
+        margin-left: -98%;
+        font-size: 18px;
+        opacity: 0.3;
+        transition: 0.5s;
+      }
+      input[type="text"]:focus + .fa,
+      input[type="password"]:focus + .fa,
+      input[type="email"]:focus + .fa {
+        opacity: 1;
+      }
+
+      @media(max-width:1400px)
+    {
+      contain {
+        grid-template-columns: 100% 0%;
+        margin-bottom: 50px;
+      }
+      logo
+      {
+        margin-left: 0;
+      }
+      form
+      {
+        margin-bottom: 100px;
+      }
+      .form-container {
+        margin-top: -10px;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <contain>
+      <div class="form-container">
+        <form action="/">
+          <div>
+            <logo> FoodTime </logo>
+          </div>
+          <div class="formcontainer">
+            <div class="container">
+              <label for="uname"> &nbsp;Username</label>
+              <input
+                id="uname"
+                type="text"
+                placeholder="Enter Username"
+                name="uname"
+                required
+              /><i class="fa fa-solid fa-user-large"></i>
+              <label for="mail"> &nbsp;Email</label>
+              <input
+                id="mail"
+                type="email"
+                placeholder="Enter Email"
+                name="mail"
+                required
+              /><i class="fa fa-solid fa-envelope"></i>
+
+              <label for="psw"> &nbsp;Password</label>
+              <input
+                id="psw"
+                type="password"
+                placeholder="Enter Password"
+                name="uname"
+                required
+              /><i class="fa fa-solid fa-lock"></i>
+              <label for="pswcon"> &nbsp;Confirm Password</label>
+              <input
+                id="pswcon"
+                type="password"
+                placeholder="Confirm Password"
+                name="psw"
+                required
+              /><i class="fa fa-solid fa-lock"></i>
+            </div>
+            <button type="submit">Sign Up</button>
+
+            <sign>
+              <span> Already a member? <a href="login.html"> Login </a> </span>
+            </sign>
+          </div>
+        </form>
+      </div>
+      <div class="image"></div>
+    </contain>
+  </body>
+</html>

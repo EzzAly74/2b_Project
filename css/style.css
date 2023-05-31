@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 930px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1130px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1340px;
+  }
+}
+
+/* start header */
+header {
+  padding: 20px;
+  
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .logo {
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+header .links {
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  display: none;
+}
+
+header .container .links a {
+  text-decoration: none;
+  color: #fff;
+  padding-top: 20px;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+header .toggle i {
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  header .container .links a {
+    display: inline;
+    width: 10px;
+  }
+
+  header .logo {
+    align-items: center;
+  }
+
+  header .toggle {
+    display: none;
+  }
+
+  header .links {
+    display: flex !important;
+    flex-direction: row;
+    width: 30%;
+  }
+
+}
+header .container .logo {
+  font-family: "Merienda";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28.3446px;
+  color: #396c03;
+  position: relative;
+}
+header .container .logo::after {
+  content: "";
+  position: absolute;
+  border: 4px solid #ff8b00;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  width: 10px;
+  height: 12px;
+  top: -10px;
+  right: -25px;
+  transform: rotate(-10deg);
+}
+
+/* end header */
